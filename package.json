@@ -1,12 +1,13 @@
 {
   "name": "dsh-skill-library",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "One installable DSH bundle with 100 practical skills across coding, testing, security, data, DevOps, product, writing, research, career, marketing, and operations.",
   "type": "module",
   "exports": {
     ".": "./plugin/index.js",
     "./plugin": "./plugin/index.js",
-    "./icon": "./icon.svg"
+    "./icon": "./icon.svg",
+    "./router": "./src/router.mjs"
   },
   "files": [
     "plugin",
