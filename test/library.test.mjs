@@ -18,7 +18,7 @@ test('100 unique skills, each with frontmatter and a body', async () => {
   assert.equal(dirs.length, 100)
 })
 test('provider lists and resolves all 100 skills', async () => {
-  let factory; apply({ skills: { registerProvider: (fn) => { factory = fn } } })
+  let factory; apply({ tools: { register: () => {} }, skills: { registerProvider: (fn) => { factory = fn } } })
   const list = await factory().list()
   assert.equal(list.length, 100)
   assert.ok(list.every((x) => x.source === 'bundled'))
@@ -34,4 +34,24 @@ test('every skill has method, verification, boundaries, and no placeholder', asy
     assert.ok(!/\bTODO\b|\bTBD\b|placeholder/i.test(text), entry.name)
   }
   assert.equal(new Set(MANIFEST.map((x) => x.description)).size, 100)
+})
+
+test('router sends common tasks to relevant skills', async () => {
+  const { route } = await import('../src/router.mjs')
+  const cases = [
+    ['TypeScript discriminated union', 'typescript-types'],
+    ['write a unit test for a parser', 'unit-testing'],
+    ['threat model an upload endpoint', 'threat-modeling'],
+    ['write a SQL query', 'sql-queries'],
+    ['prepare for a job interview', 'interview-prep'],
+    ['write an SEO landing page', 'seo'],
+    ['set up a Docker image', 'docker'],
+    ['guard against prompt injection', 'injection-defense'],
+    ['review an authentication bypass', 'secure-code-review'],
+    ['plan a project with risks', 'project-planning'],
+  ]
+  for (const [task, expected] of cases) {
+    const r = route(task, MANIFEST, 5)
+    assert.ok(r.matches.some((m) => m.name === expected), `${task} -> ${r.matches.map((m) => m.name).join(',')}`)
+  }
 })
