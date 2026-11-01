@@ -1,0 +1,14 @@
+{
+  "name": "dsh-skill-library",
+  "version": "0.1.0",
+  "description": "One installable DSH bundle with 100 practical skills across coding, testing, security, data, DevOps, product, writing, research, career, marketing, and operations.",
+  "type": "module",
+  "exports": { ".": "./plugin/index.js", "./plugin": "./plugin/index.js", "./icon": "./icon.svg" },
+  "files": ["plugin", "skills", "manifest.json", "icon.svg", "README.md", "NOTICE.md", "LICENSE"],
+  "dsh": { "bundle": { "patch": "./plugin/cordis.patch.yml" } },
+  "engines": { "node": ">=20" },
+  "keywords": ["dsh", "deepseek-harness", "skills", "library", "workflow", "agents"],
+  "license": "MIT",
+  "scripts": { "test": "node --test test/*.test.mjs" },
+  "repository": { "type": "git", "url": "https://github.com/lengrufeng2008/dsh-skill-library" }
+}
