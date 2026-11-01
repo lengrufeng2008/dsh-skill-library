@@ -1,0 +1,4 @@
+- insert:
+    - id: skill-library
+      name: dsh-skill-library
+      config: {}
