@@ -1,5 +1,6 @@
 // DSH bundle: one provider exposing a 100-skill library.
 import { readFile } from 'node:fs/promises'
+import { route, renderRoute } from '../src/router.mjs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 const PLUGIN_DIR = dirname(fileURLToPath(import.meta.url))
@@ -13,8 +14,9 @@ function summary(entry) {
   return { name: entry.name, description: entry.description, ...(entry.whenToUse ? { whenToUse: entry.whenToUse } : {}), invocation: { modelInvocable: true, userInvocable: true }, source: 'bundled', provider: PROVIDER, resourceBase: { kind: 'directory', path: join(SKILLS_DIR, entry.dir) }, rank: 500, locator: entry.name, metadata: { domain: entry.domain, version: '0.1.0' } }
 }
 export const name = 'skill-library'
-export const inject = ['skills']
+export const inject = ['tools', 'skills']
 export function apply(ctx) {
+  ctx.tools.register({ name: 'skill_route', description: 'Route a task to the most relevant skills in the 100-skill library using keyword scoring. Read-only; returns candidates, not a guarantee.', parameters: { type: 'object', additionalProperties: false, properties: { task: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 20 } }, required: ['task'] }, output: { schema: { type: 'object', additionalProperties: false, properties: { markdown: { type: 'string' }, matches: { type: 'integer' } }, required: ['markdown', 'matches'] }, render: (_a, v) => [{ type: 'text', text: v.markdown }] }, timeoutMs: 10_000, async execute(args = {}) { const r = route(args.task, await loadManifest(), args.limit || 5); return { markdown: renderRoute(r), matches: r.matches.length } } })
   ctx.skills.registerProvider(() => ({
     name: PROVIDER,
     async list() { return (await loadManifest()).map(summary) },
