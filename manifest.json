@@ -1,0 +1,702 @@
+[
+  {
+    "name": "typescript-types",
+    "dir": "typescript-types",
+    "description": "Model domain state with discriminated unions and exhaustive checks instead of optional-field soup.",
+    "whenToUse": "Model domain state with discriminated unions and exhaustive checks instead of optional-field soup.",
+    "domain": "coding"
+  },
+  {
+    "name": "python-typing",
+    "dir": "python-typing",
+    "description": "Use precise annotations, protocols, and runtime validation at boundaries.",
+    "whenToUse": "Use precise annotations, protocols, and runtime validation at boundaries.",
+    "domain": "coding"
+  },
+  {
+    "name": "go-concurrency",
+    "dir": "go-concurrency",
+    "description": "Bound goroutines, close channels once, and make cancellation explicit.",
+    "whenToUse": "Bound goroutines, close channels once, and make cancellation explicit.",
+    "domain": "coding"
+  },
+  {
+    "name": "rust-ownership",
+    "dir": "rust-ownership",
+    "description": "Make ownership and lifetimes explicit; avoid cloning to silence the compiler.",
+    "whenToUse": "Make ownership and lifetimes explicit; avoid cloning to silence the compiler.",
+    "domain": "coding"
+  },
+  {
+    "name": "sql-queries",
+    "dir": "sql-queries",
+    "description": "Write set-based SQL with explicit joins, null semantics, and an EXPLAIN check.",
+    "whenToUse": "Write set-based SQL with explicit joins, null semantics, and an EXPLAIN check.",
+    "domain": "coding"
+  },
+  {
+    "name": "api-design",
+    "dir": "api-design",
+    "description": "Design resources, errors, pagination, and idempotency before implementation.",
+    "whenToUse": "Design resources, errors, pagination, and idempotency before implementation.",
+    "domain": "coding"
+  },
+  {
+    "name": "refactoring",
+    "dir": "refactoring",
+    "description": "Preserve behavior with small, reversible steps and tests around the seam.",
+    "whenToUse": "Preserve behavior with small, reversible steps and tests around the seam.",
+    "domain": "coding"
+  },
+  {
+    "name": "debugging",
+    "dir": "debugging",
+    "description": "Reproduce, bisect, and explain the failure before changing the code.",
+    "whenToUse": "Reproduce, bisect, and explain the failure before changing the code.",
+    "domain": "coding"
+  },
+  {
+    "name": "code-review",
+    "dir": "code-review",
+    "description": "Review behavior and risk first; style only when it affects comprehension.",
+    "whenToUse": "Review behavior and risk first; style only when it affects comprehension.",
+    "domain": "coding"
+  },
+  {
+    "name": "legacy-code",
+    "dir": "legacy-code",
+    "description": "Characterize current behavior, find seams, and migrate incrementally.",
+    "whenToUse": "Characterize current behavior, find seams, and migrate incrementally.",
+    "domain": "coding"
+  },
+  {
+    "name": "unit-testing",
+    "dir": "unit-testing",
+    "description": "Test one behavior with a clear arrange/act/assert and a failing-first check.",
+    "whenToUse": "Test one behavior with a clear arrange/act/assert and a failing-first check.",
+    "domain": "testing"
+  },
+  {
+    "name": "integration-testing",
+    "dir": "integration-testing",
+    "description": "Test real boundaries, isolation, and cleanup with a reproducible fixture.",
+    "whenToUse": "Test real boundaries, isolation, and cleanup with a reproducible fixture.",
+    "domain": "testing"
+  },
+  {
+    "name": "e2e-testing",
+    "dir": "e2e-testing",
+    "description": "Drive the user path through the real stack; keep the suite small and deterministic.",
+    "whenToUse": "Drive the user path through the real stack; keep the suite small and deterministic.",
+    "domain": "testing"
+  },
+  {
+    "name": "property-testing",
+    "dir": "property-testing",
+    "description": "State invariants, generate inputs, and shrink failures.",
+    "whenToUse": "State invariants, generate inputs, and shrink failures.",
+    "domain": "testing"
+  },
+  {
+    "name": "fuzz-testing",
+    "dir": "fuzz-testing",
+    "description": "Fuzz parsers and boundaries with a seed corpus and a crash triage loop.",
+    "whenToUse": "Fuzz parsers and boundaries with a seed corpus and a crash triage loop.",
+    "domain": "testing"
+  },
+  {
+    "name": "regression-testing",
+    "dir": "regression-testing",
+    "description": "Turn every real bug into a test that fails before the fix.",
+    "whenToUse": "Turn every real bug into a test that fails before the fix.",
+    "domain": "testing"
+  },
+  {
+    "name": "flaky-tests",
+    "dir": "flaky-tests",
+    "description": "Find the source of nondeterminism; do not add retries to hide it.",
+    "whenToUse": "Find the source of nondeterminism; do not add retries to hide it.",
+    "domain": "testing"
+  },
+  {
+    "name": "coverage-strategy",
+    "dir": "coverage-strategy",
+    "description": "Use coverage as a map of untested risk, not as a target.",
+    "whenToUse": "Use coverage as a map of untested risk, not as a target.",
+    "domain": "testing"
+  },
+  {
+    "name": "threat-modeling",
+    "dir": "threat-modeling",
+    "description": "Map assets, trust boundaries, attacker capability, and mitigations.",
+    "whenToUse": "Map assets, trust boundaries, attacker capability, and mitigations.",
+    "domain": "security"
+  },
+  {
+    "name": "authentication",
+    "dir": "authentication",
+    "description": "Design identity proofing, session lifetime, and recovery paths.",
+    "whenToUse": "Design identity proofing, session lifetime, and recovery paths.",
+    "domain": "security"
+  },
+  {
+    "name": "authorization",
+    "dir": "authorization",
+    "description": "Enforce least privilege at every boundary; test object-level access.",
+    "whenToUse": "Enforce least privilege at every boundary; test object-level access.",
+    "domain": "security"
+  },
+  {
+    "name": "secrets-management",
+    "dir": "secrets-management",
+    "description": "Keep secrets out of code, logs, prompts, and artifacts; rotate on exposure.",
+    "whenToUse": "Keep secrets out of code, logs, prompts, and artifacts; rotate on exposure.",
+    "domain": "security"
+  },
+  {
+    "name": "injection-defense",
+    "dir": "injection-defense",
+    "description": "Treat all input as hostile; parameterize, encode, and validate at the sink.",
+    "whenToUse": "Treat all input as hostile; parameterize, encode, and validate at the sink.",
+    "domain": "security"
+  },
+  {
+    "name": "supply-chain-security",
+    "dir": "supply-chain-security",
+    "description": "Pin sources, verify provenance, and review lifecycle scripts.",
+    "whenToUse": "Pin sources, verify provenance, and review lifecycle scripts.",
+    "domain": "security"
+  },
+  {
+    "name": "cryptography",
+    "dir": "cryptography",
+    "description": "Use vetted primitives and protocols; never invent crypto.",
+    "whenToUse": "Use vetted primitives and protocols; never invent crypto.",
+    "domain": "security"
+  },
+  {
+    "name": "privacy-review",
+    "dir": "privacy-review",
+    "description": "Minimize data, define purpose and retention, and redact before sharing.",
+    "whenToUse": "Minimize data, define purpose and retention, and redact before sharing.",
+    "domain": "security"
+  },
+  {
+    "name": "incident-response",
+    "dir": "incident-response",
+    "description": "Contain first, preserve evidence, communicate, and write the timeline.",
+    "whenToUse": "Contain first, preserve evidence, communicate, and write the timeline.",
+    "domain": "security"
+  },
+  {
+    "name": "secure-code-review",
+    "dir": "secure-code-review",
+    "description": "Look for auth bypass, injection, secrets, unsafe deserialization, and path traversal.",
+    "whenToUse": "Look for auth bypass, injection, secrets, unsafe deserialization, and path traversal.",
+    "domain": "security"
+  },
+  {
+    "name": "sql-analysis",
+    "dir": "sql-analysis",
+    "description": "Answer the decision question with explicit grain, filters, and null handling.",
+    "whenToUse": "Answer the decision question with explicit grain, filters, and null handling.",
+    "domain": "data"
+  },
+  {
+    "name": "pandas-analysis",
+    "dir": "pandas-analysis",
+    "description": "Keep transformations explicit, typed, and reproducible.",
+    "whenToUse": "Keep transformations explicit, typed, and reproducible.",
+    "domain": "data"
+  },
+  {
+    "name": "statistics",
+    "dir": "statistics",
+    "description": "State the estimand, assumptions, uncertainty, and multiple-comparison plan.",
+    "whenToUse": "State the estimand, assumptions, uncertainty, and multiple-comparison plan.",
+    "domain": "data"
+  },
+  {
+    "name": "data-visualization",
+    "dir": "data-visualization",
+    "description": "Choose the mark for the question; label axes and uncertainty.",
+    "whenToUse": "Choose the mark for the question; label axes and uncertainty.",
+    "domain": "data"
+  },
+  {
+    "name": "etl-design",
+    "dir": "etl-design",
+    "description": "Make ingestion idempotent, schema-aware, and recoverable.",
+    "whenToUse": "Make ingestion idempotent, schema-aware, and recoverable.",
+    "domain": "data"
+  },
+  {
+    "name": "data-quality",
+    "dir": "data-quality",
+    "description": "Define freshness, completeness, uniqueness, and validity tests.",
+    "whenToUse": "Define freshness, completeness, uniqueness, and validity tests.",
+    "domain": "data"
+  },
+  {
+    "name": "experiment-design",
+    "dir": "experiment-design",
+    "description": "Pre-register the hypothesis, power, metric, and stopping rule.",
+    "whenToUse": "Pre-register the hypothesis, power, metric, and stopping rule.",
+    "domain": "data"
+  },
+  {
+    "name": "forecasting",
+    "dir": "forecasting",
+    "description": "Backtest on time-ordered splits; report error and uncertainty.",
+    "whenToUse": "Backtest on time-ordered splits; report error and uncertainty.",
+    "domain": "data"
+  },
+  {
+    "name": "ml-evaluation",
+    "dir": "ml-evaluation",
+    "description": "Evaluate on a held-out distribution and report slices and failure modes.",
+    "whenToUse": "Evaluate on a held-out distribution and report slices and failure modes.",
+    "domain": "data"
+  },
+  {
+    "name": "llm-evaluation",
+    "dir": "llm-evaluation",
+    "description": "Use task-specific rubrics, adversarial cases, and human spot checks.",
+    "whenToUse": "Use task-specific rubrics, adversarial cases, and human spot checks.",
+    "domain": "data"
+  },
+  {
+    "name": "docker",
+    "dir": "docker",
+    "description": "Build small, pinned, non-root images with a reproducible context.",
+    "whenToUse": "Build small, pinned, non-root images with a reproducible context.",
+    "domain": "devops"
+  },
+  {
+    "name": "kubernetes",
+    "dir": "kubernetes",
+    "description": "Define requests/limits, probes, rollout, and rollback.",
+    "whenToUse": "Define requests/limits, probes, rollout, and rollback.",
+    "domain": "devops"
+  },
+  {
+    "name": "ci-pipelines",
+    "dir": "ci-pipelines",
+    "description": "Make CI deterministic, cached, and fail-fast with artifacts.",
+    "whenToUse": "Make CI deterministic, cached, and fail-fast with artifacts.",
+    "domain": "devops"
+  },
+  {
+    "name": "observability",
+    "dir": "observability",
+    "description": "Instrument the user path with logs, metrics, and traces; redact secrets.",
+    "whenToUse": "Instrument the user path with logs, metrics, and traces; redact secrets.",
+    "domain": "devops"
+  },
+  {
+    "name": "incident-ops",
+    "dir": "incident-ops",
+    "description": "Separate command, communications, and investigation; keep a timeline.",
+    "whenToUse": "Separate command, communications, and investigation; keep a timeline.",
+    "domain": "devops"
+  },
+  {
+    "name": "terraform",
+    "dir": "terraform",
+    "description": "Plan, review, and pin providers; avoid drift and destructive changes.",
+    "whenToUse": "Plan, review, and pin providers; avoid drift and destructive changes.",
+    "domain": "devops"
+  },
+  {
+    "name": "linux-troubleshooting",
+    "dir": "linux-troubleshooting",
+    "description": "Check resources, permissions, processes, and logs in a fixed order.",
+    "whenToUse": "Check resources, permissions, processes, and logs in a fixed order.",
+    "domain": "devops"
+  },
+  {
+    "name": "networking",
+    "dir": "networking",
+    "description": "Isolate DNS, route, TLS, and firewall layers; test from the real client.",
+    "whenToUse": "Isolate DNS, route, TLS, and firewall layers; test from the real client.",
+    "domain": "devops"
+  },
+  {
+    "name": "backup-recovery",
+    "dir": "backup-recovery",
+    "description": "Back up, restore-test, and document RPO/RTO.",
+    "whenToUse": "Back up, restore-test, and document RPO/RTO.",
+    "domain": "devops"
+  },
+  {
+    "name": "cloud-cost",
+    "dir": "cloud-cost",
+    "description": "Attribute cost to owners and workloads; remove idle capacity.",
+    "whenToUse": "Attribute cost to owners and workloads; remove idle capacity.",
+    "domain": "devops"
+  },
+  {
+    "name": "requirements",
+    "dir": "requirements",
+    "description": "Separate user problem, outcome, constraints, and non-goals.",
+    "whenToUse": "Separate user problem, outcome, constraints, and non-goals.",
+    "domain": "product"
+  },
+  {
+    "name": "roadmap",
+    "dir": "roadmap",
+    "description": "Sequence outcomes by evidence, risk, and dependency.",
+    "whenToUse": "Sequence outcomes by evidence, risk, and dependency.",
+    "domain": "product"
+  },
+  {
+    "name": "ux-research",
+    "dir": "ux-research",
+    "description": "Ask about past behavior, not hypothetical intent; recruit the right users.",
+    "whenToUse": "Ask about past behavior, not hypothetical intent; recruit the right users.",
+    "domain": "product"
+  },
+  {
+    "name": "wireframing",
+    "dir": "wireframing",
+    "description": "Wire the smallest flow that tests the riskiest assumption.",
+    "whenToUse": "Wire the smallest flow that tests the riskiest assumption.",
+    "domain": "product"
+  },
+  {
+    "name": "accessibility",
+    "dir": "accessibility",
+    "description": "Check keyboard, contrast, semantics, focus, and screen-reader flow.",
+    "whenToUse": "Check keyboard, contrast, semantics, focus, and screen-reader flow.",
+    "domain": "product"
+  },
+  {
+    "name": "design-system",
+    "dir": "design-system",
+    "description": "Define tokens, components, states, and migration rules.",
+    "whenToUse": "Define tokens, components, states, and migration rules.",
+    "domain": "product"
+  },
+  {
+    "name": "pricing-strategy",
+    "dir": "pricing-strategy",
+    "description": "Anchor on value and segment; test willingness to pay.",
+    "whenToUse": "Anchor on value and segment; test willingness to pay.",
+    "domain": "product"
+  },
+  {
+    "name": "onboarding",
+    "dir": "onboarding",
+    "description": "Get the user to first value; measure time-to-value and drop-off.",
+    "whenToUse": "Get the user to first value; measure time-to-value and drop-off.",
+    "domain": "product"
+  },
+  {
+    "name": "product-analytics",
+    "dir": "product-analytics",
+    "description": "Define events, funnels, and guardrails before launch.",
+    "whenToUse": "Define events, funnels, and guardrails before launch.",
+    "domain": "product"
+  },
+  {
+    "name": "feedback-loop",
+    "dir": "feedback-loop",
+    "description": "Close the loop with users; tag, prioritize, and report back.",
+    "whenToUse": "Close the loop with users; tag, prioritize, and report back.",
+    "domain": "product"
+  },
+  {
+    "name": "technical-writing",
+    "dir": "technical-writing",
+    "description": "Write for a named reader and a concrete task; lead with the decision.",
+    "whenToUse": "Write for a named reader and a concrete task; lead with the decision.",
+    "domain": "writing"
+  },
+  {
+    "name": "documentation",
+    "dir": "documentation",
+    "description": "Make docs discoverable, current, example-first, and owned.",
+    "whenToUse": "Make docs discoverable, current, example-first, and owned.",
+    "domain": "writing"
+  },
+  {
+    "name": "api-docs",
+    "dir": "api-docs",
+    "description": "Document auth, errors, pagination, idempotency, and runnable examples.",
+    "whenToUse": "Document auth, errors, pagination, idempotency, and runnable examples.",
+    "domain": "writing"
+  },
+  {
+    "name": "copy-editing",
+    "dir": "copy-editing",
+    "description": "Cut filler, fix ambiguity, and preserve the author's voice.",
+    "whenToUse": "Cut filler, fix ambiguity, and preserve the author's voice.",
+    "domain": "writing"
+  },
+  {
+    "name": "style-guide",
+    "dir": "style-guide",
+    "description": "Define terms, tone, formatting, and examples with exceptions.",
+    "whenToUse": "Define terms, tone, formatting, and examples with exceptions.",
+    "domain": "writing"
+  },
+  {
+    "name": "translation",
+    "dir": "translation",
+    "description": "Preserve meaning, terminology, and locale conventions; review with a native reader.",
+    "whenToUse": "Preserve meaning, terminology, and locale conventions; review with a native reader.",
+    "domain": "writing"
+  },
+  {
+    "name": "summarization",
+    "dir": "summarization",
+    "description": "Preserve decisions, numbers, uncertainty, and dissent.",
+    "whenToUse": "Preserve decisions, numbers, uncertainty, and dissent.",
+    "domain": "writing"
+  },
+  {
+    "name": "changelog",
+    "dir": "changelog",
+    "description": "Write for users: what changed, why, impact, and action.",
+    "whenToUse": "Write for users: what changed, why, impact, and action.",
+    "domain": "writing"
+  },
+  {
+    "name": "release-notes",
+    "dir": "release-notes",
+    "description": "Separate features, fixes, breaking changes, and upgrade steps.",
+    "whenToUse": "Separate features, fixes, breaking changes, and upgrade steps.",
+    "domain": "writing"
+  },
+  {
+    "name": "presentation",
+    "dir": "presentation",
+    "description": "One message per slide; use evidence and a clear ask.",
+    "whenToUse": "One message per slide; use evidence and a clear ask.",
+    "domain": "writing"
+  },
+  {
+    "name": "literature-review",
+    "dir": "literature-review",
+    "description": "Define the question, search strategy, inclusion rules, and synthesis method.",
+    "whenToUse": "Define the question, search strategy, inclusion rules, and synthesis method.",
+    "domain": "research"
+  },
+  {
+    "name": "citation-check",
+    "dir": "citation-check",
+    "description": "Verify each claim against the real source; never cite from memory.",
+    "whenToUse": "Verify each claim against the real source; never cite from memory.",
+    "domain": "research"
+  },
+  {
+    "name": "experiment-methods",
+    "dir": "experiment-methods",
+    "description": "Pre-specify controls, sample size, stopping, and analysis.",
+    "whenToUse": "Pre-specify controls, sample size, stopping, and analysis.",
+    "domain": "research"
+  },
+  {
+    "name": "peer-review",
+    "dir": "peer-review",
+    "description": "Assess claim, method, evidence, and reproducibility, not prose style.",
+    "whenToUse": "Assess claim, method, evidence, and reproducibility, not prose style.",
+    "domain": "research"
+  },
+  {
+    "name": "reproducibility",
+    "dir": "reproducibility",
+    "description": "Record environment, data, code, seeds, and exact commands.",
+    "whenToUse": "Record environment, data, code, seeds, and exact commands.",
+    "domain": "research"
+  },
+  {
+    "name": "scientific-visualization",
+    "dir": "scientific-visualization",
+    "description": "Show uncertainty and avoid chartjunk; label units and scales.",
+    "whenToUse": "Show uncertainty and avoid chartjunk; label units and scales.",
+    "domain": "research"
+  },
+  {
+    "name": "grant-writing",
+    "dir": "grant-writing",
+    "description": "Align the question, gap, approach, feasibility, and impact.",
+    "whenToUse": "Align the question, gap, approach, feasibility, and impact.",
+    "domain": "research"
+  },
+  {
+    "name": "patent-search",
+    "dir": "patent-search",
+    "description": "Search claims and prior art by concept, not just keywords.",
+    "whenToUse": "Search claims and prior art by concept, not just keywords.",
+    "domain": "research"
+  },
+  {
+    "name": "science-writing",
+    "dir": "science-writing",
+    "description": "Separate observation, inference, and speculation; state limits.",
+    "whenToUse": "Separate observation, inference, and speculation; state limits.",
+    "domain": "research"
+  },
+  {
+    "name": "fact-checking",
+    "dir": "fact-checking",
+    "description": "Trace every factual claim to a primary source and date it.",
+    "whenToUse": "Trace every factual claim to a primary source and date it.",
+    "domain": "research"
+  },
+  {
+    "name": "job-fit",
+    "dir": "job-fit",
+    "description": "Map must-haves to evidence; score fit and flag dealbreakers.",
+    "whenToUse": "Map must-haves to evidence; score fit and flag dealbreakers.",
+    "domain": "career"
+  },
+  {
+    "name": "resume-tailoring",
+    "dir": "resume-tailoring",
+    "description": "Mirror the role's language with real evidence; never invent.",
+    "whenToUse": "Mirror the role's language with real evidence; never invent.",
+    "domain": "career"
+  },
+  {
+    "name": "interview-prep",
+    "dir": "interview-prep",
+    "description": "Build STAR+R stories and a company-specific question bank.",
+    "whenToUse": "Build STAR+R stories and a company-specific question bank.",
+    "domain": "career"
+  },
+  {
+    "name": "salary-negotiation",
+    "dir": "salary-negotiation",
+    "description": "Anchor on scope and market data; negotiate the whole package.",
+    "whenToUse": "Anchor on scope and market data; negotiate the whole package.",
+    "domain": "career"
+  },
+  {
+    "name": "portfolio",
+    "dir": "portfolio",
+    "description": "Show the problem, constraints, decisions, and measured outcome.",
+    "whenToUse": "Show the problem, constraints, decisions, and measured outcome.",
+    "domain": "career"
+  },
+  {
+    "name": "career-plan",
+    "dir": "career-plan",
+    "description": "Choose a direction, close one skill gap, and set a review date.",
+    "whenToUse": "Choose a direction, close one skill gap, and set a review date.",
+    "domain": "career"
+  },
+  {
+    "name": "positioning",
+    "dir": "positioning",
+    "description": "Name the audience, alternative, differentiated value, and proof.",
+    "whenToUse": "Name the audience, alternative, differentiated value, and proof.",
+    "domain": "marketing"
+  },
+  {
+    "name": "copywriting",
+    "dir": "copywriting",
+    "description": "Lead with the reader's problem and a concrete promise; prove it.",
+    "whenToUse": "Lead with the reader's problem and a concrete promise; prove it.",
+    "domain": "marketing"
+  },
+  {
+    "name": "seo",
+    "dir": "seo",
+    "description": "Match search intent, structure, and authority; avoid keyword stuffing.",
+    "whenToUse": "Match search intent, structure, and authority; avoid keyword stuffing.",
+    "domain": "marketing"
+  },
+  {
+    "name": "content-strategy",
+    "dir": "content-strategy",
+    "description": "Map audience questions to formats, owners, and distribution.",
+    "whenToUse": "Map audience questions to formats, owners, and distribution.",
+    "domain": "marketing"
+  },
+  {
+    "name": "email-marketing",
+    "dir": "email-marketing",
+    "description": "Segment, personalize, and test one variable; respect consent.",
+    "whenToUse": "Segment, personalize, and test one variable; respect consent.",
+    "domain": "marketing"
+  },
+  {
+    "name": "paid-ads",
+    "dir": "paid-ads",
+    "description": "Define the unit economics, creative test, and kill criteria.",
+    "whenToUse": "Define the unit economics, creative test, and kill criteria.",
+    "domain": "marketing"
+  },
+  {
+    "name": "marketing-analytics",
+    "dir": "marketing-analytics",
+    "description": "Instrument source-to-revenue; separate correlation from lift.",
+    "whenToUse": "Instrument source-to-revenue; separate correlation from lift.",
+    "domain": "marketing"
+  },
+  {
+    "name": "conversion-optimization",
+    "dir": "conversion-optimization",
+    "description": "Find the friction, form one hypothesis, and run a powered test.",
+    "whenToUse": "Find the friction, form one hypothesis, and run a powered test.",
+    "domain": "marketing"
+  },
+  {
+    "name": "project-planning",
+    "dir": "project-planning",
+    "description": "Define outcome, milestones, dependencies, owner, and stop rule.",
+    "whenToUse": "Define outcome, milestones, dependencies, owner, and stop rule.",
+    "domain": "ops"
+  },
+  {
+    "name": "risk-register",
+    "dir": "risk-register",
+    "description": "Name likelihood, impact, trigger, owner, and mitigation.",
+    "whenToUse": "Name likelihood, impact, trigger, owner, and mitigation.",
+    "domain": "ops"
+  },
+  {
+    "name": "meeting-facilitation",
+    "dir": "meeting-facilitation",
+    "description": "Publish the decision question, timebox, and written outcome.",
+    "whenToUse": "Publish the decision question, timebox, and written outcome.",
+    "domain": "ops"
+  },
+  {
+    "name": "decision-log",
+    "dir": "decision-log",
+    "description": "Record the decision, alternatives, evidence, owner, and review date.",
+    "whenToUse": "Record the decision, alternatives, evidence, owner, and review date.",
+    "domain": "ops"
+  },
+  {
+    "name": "stakeholder-map",
+    "dir": "stakeholder-map",
+    "description": "Map influence, interest, concerns, and communication cadence.",
+    "whenToUse": "Map influence, interest, concerns, and communication cadence.",
+    "domain": "ops"
+  },
+  {
+    "name": "retrospective",
+    "dir": "retrospective",
+    "description": "Separate facts, causes, and experiments; assign one owner.",
+    "whenToUse": "Separate facts, causes, and experiments; assign one owner.",
+    "domain": "ops"
+  },
+  {
+    "name": "prompt-engineering",
+    "dir": "prompt-engineering",
+    "description": "State role, task, constraints, output schema, and a verification step.",
+    "whenToUse": "State role, task, constraints, output schema, and a verification step.",
+    "domain": "misc"
+  },
+  {
+    "name": "context-budget",
+    "dir": "context-budget",
+    "description": "Measure what enters context; cut stale and duplicate material first.",
+    "whenToUse": "Measure what enters context; cut stale and duplicate material first.",
+    "domain": "misc"
+  }
+]
