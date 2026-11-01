@@ -12,6 +12,8 @@ dsh plugin --profile web add /home/lrf/dsh/products/dsh-skill-library
 
 Ask for a skill by name, or let the router/agent discover it from the skill catalog.
 
+Full list: [skills/INDEX.md](skills/INDEX.md).
+
 ## Design
 
 - Each skill has `name`, `description`, `whenToUse`, a method, verification, and explicit boundaries.
