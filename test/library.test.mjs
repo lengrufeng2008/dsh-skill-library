@@ -26,3 +26,12 @@ test('provider lists and resolves all 100 skills', async () => {
   assert.ok(one.content.trimStart().startsWith('# TypeScript type design'))
   assert.equal(await factory().get({ name: 'missing' }), undefined)
 })
+
+test('every skill has method, verification, boundaries, and no placeholder', async () => {
+  for (const entry of MANIFEST) {
+    const text = await readFile(join(ROOT, 'skills', entry.dir, 'SKILL.md'), 'utf8')
+    for (const heading of ['## Use', '## Method', '## Verification', '## Boundaries']) assert.ok(text.includes(heading), `${entry.name}: ${heading}`)
+    assert.ok(!/\bTODO\b|\bTBD\b|placeholder/i.test(text), entry.name)
+  }
+  assert.equal(new Set(MANIFEST.map((x) => x.description)).size, 100)
+})
